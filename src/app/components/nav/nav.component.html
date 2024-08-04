@@ -1,0 +1,23 @@
+<!--<mat-toolbar>-->
+<!--  <span>Clientes</span> <span class="spacer"></span> <button mat-raised-button color="primary">Exportar</button>-->
+<!--  <button mat-raised-button color="accent">Nuevo</button>-->
+<!--</mat-toolbar>-->
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar color="primary">
+      <img [ngSrc]="logo" fill alt="Logo"/>
+    </mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLink="clients">Clients</a>
+      <a mat-list-item href="#">Client look history</a>
+      <a mat-list-item href="#">Emergency PIN configuration</a>
+      <a mat-list-item href="#">Emergency PIN history</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet />
+  </mat-sidenav-content>
+</mat-sidenav-container>
