@@ -1,0 +1,28 @@
+<div class="create-form-group">
+  <form [formGroup]="clientForm" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+      <mat-label>Name</mat-label>
+      <input matInput formControlName="id" name="id"/>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Phone</mat-label>
+      <input matInput formControlName="phone"/>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>E-mail</mat-label>
+      <input matInput formControlName="email"/>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Start Date</mat-label>
+      <input matInput formControlName="startDate" [matDatepicker]="startDatePicker" readonly>
+      <mat-datepicker-toggle matIconSuffix [for]="startDatePicker"></mat-datepicker-toggle>
+      <mat-datepicker #startDatePicker disabled="false"></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>End Date</mat-label>
+      <input matInput formControlName="endDate" [matDatepicker]="endDatePicker" readonly>
+      <mat-datepicker-toggle matIconSuffix [for]="endDatePicker"></mat-datepicker-toggle>
+      <mat-datepicker #endDatePicker disabled="false"></mat-datepicker>
+    </mat-form-field>
+  </form>
+</div>

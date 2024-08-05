@@ -1,0 +1,43 @@
+.button-group,
+.search-group {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.button-group > button {
+  margin-right: 8px;
+}
+
+.search-group > button {
+  margin-left: 8px;
+  align-self: center;
+}
+
+.button-group,
+.title {
+  margin-bottom: 16px;
+}
+
+mat-accordion {
+  width: 25%;
+  display: block;
+  margin: 0 auto;
+}
+
+table {
+  width: 100%;
+}
+/* Estilos para hacer los botones responsivos */
+@media (max-width: 600px) {
+  .button-group, .search-group {
+    flex-direction: column;
+  }
+
+  .search-group > button,
+  .button-group > button {
+    margin-right: 0;
+    margin-bottom: 8px;
+    width: 100%;
+  }
+}
+
