@@ -8,7 +8,7 @@ import {ClientData} from "../components/clients/list/clients.component";
 })
 export class ClientService {
 
-  private apiUrl = 'http://localhost:8080/api/clients'; // Reemplaza con la URL de tu backend
+  apiUrl = 'http://localhost:8080/api/clients'; // Reemplaza con la URL de tu backend
 
   constructor(private http: HttpClient) { }
 

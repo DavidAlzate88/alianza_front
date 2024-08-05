@@ -47,13 +47,13 @@ export class CreateComponent {
       date: this.clientForm.value.startDate ? this.clientForm.value.startDate: ''
     };
     this.clientService.saveClients(clientForm).subscribe(
-      (clienteCreado) => {
-        console.log('Cliente creado:', clienteCreado);
-        this._snackBar.open('Cliente creado exitosamente');
+      (clientCreated) => {
+        console.log('Client created:', clientCreated);
+        this._snackBar.open('Client created successfully');
 
       },
       (error) => {
-        console.error('Error al crear cliente:', error);
+        console.error('Error when trying to create client:', error);
         // Manejar el error de alguna manera
       }
     );
