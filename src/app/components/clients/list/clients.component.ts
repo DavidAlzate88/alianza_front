@@ -1,4 +1,4 @@
-import { Component, inject, signal, ViewChild, viewChild } from '@angular/core';
+import {Component, inject, OnInit, signal, ViewChild, viewChild} from '@angular/core';
 import { MatTable, MatTableDataSource, MatTableModule } from "@angular/material/table";
 import { MatIconModule } from "@angular/material/icon";
 import { MatButtonModule } from "@angular/material/button";
@@ -16,7 +16,7 @@ import { ClientService } from "../../../services/client.service";
 import { MatSnackBar } from "@angular/material/snack-bar";
 
 export interface ClientData {
-  key: string;
+  key?: string;
   id: string;
   email: string;
   phone: string;
@@ -51,7 +51,7 @@ const ELEMENT_DATA: ClientData[] = [
   templateUrl: './clients.component.html',
   styleUrl: './clients.component.scss'
 })
-export class ClientsComponent {
+export class ClientsComponent implements OnInit {
   displayedColumns: string[] = ['key', 'id', 'email', 'phone', 'date', 'actions'];
   dataSource = new MatTableDataSource(ELEMENT_DATA);
   @ViewChild(MatTable) table!: MatTable<ClientData>;

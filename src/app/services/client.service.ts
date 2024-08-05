@@ -15,4 +15,12 @@ export class ClientService {
   getClients(): Observable<ClientData[]> {
     return this.http.get<ClientData[]>(this.apiUrl);
   }
+
+  getClientById(key: string): Observable<ClientData[]> {
+    return this.http.get<ClientData[]>(`${this.apiUrl}/${key}`);
+  }
+
+  saveClients(client:ClientData): Observable<ClientData> {
+    return this.http.post<ClientData>(`${this.apiUrl}`, client);
+  }
 }
