@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {MatSlideToggleModule} from "@angular/material/slide-toggle";
-import {NavComponent} from "./components/nav/nav.component";
+import {NavComponent} from "./components/utils/nav/nav.component";
 import {MatToolbar} from "@angular/material/toolbar";
 import {MatButton} from "@angular/material/button";
 
